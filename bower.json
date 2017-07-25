@@ -1,0 +1,21 @@
+{
+  "name": "IdentiFly",
+  "description": "B2B Marketplace",
+  "authors": [
+    "Kenny Vo"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kenny-vo/identifly.v2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.5",
+    "angular-route": "^1.6.5"
+  }
+}
