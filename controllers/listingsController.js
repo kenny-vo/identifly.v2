@@ -6,9 +6,9 @@
 
  // GET /api/listings
 function index (req, res) {
-  db.Listing.find{}, function(err, allListings) {
+  db.Listing.find({}, function(err, allListings) {
     res.json(allListings);
-  }
+  });
 }
 
 module.exports = {
