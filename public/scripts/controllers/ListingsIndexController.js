@@ -7,6 +7,42 @@ ListingsIndexController.$inject = ['$http'];
 function ListingsIndexController ($http) {
   var vm = this;
   vm.newListing = {};
+  vm.newListing = {
+    topic: "Test",
+    description: "Test",
+    budget: "Test",
+    location: "Test",
+    req1: "Test",
+    req2: "Test",
+    req3: "Test",
+    date: "Test",
+    date_req: "Test"
+  };
+
+  vm.listings = [
+    {
+      topic: "Test",
+      description: "Test",
+      budget: "Test",
+      location: "Test",
+      req1: "Test",
+      req2: "Test",
+      req3: "Test",
+      date: "Test",
+      date_req: "Test"
+    },
+    {
+      topic: "Test",
+      description: "Test",
+      budget: "Test",
+      location: "Test",
+      req1: "Test",
+      req2: "Test",
+      req3: "Test",
+      date: "Test",
+      date_req: "Test"
+    }
+  ];
 
   $http({
     method: 'GET',

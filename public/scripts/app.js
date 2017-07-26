@@ -17,9 +17,7 @@ function config ($routeProvider, $locationProvider) {
       controller: 'ListingsIndexController'
     })
     .when('/listings/:id', {
-      templateURL: '/templates/listings-show',
-      controllerAs: 'listingsShowCtrl',
-      controller: 'ListingsShowController'
+
     })
 
     $locationProvider.html5Mode({
