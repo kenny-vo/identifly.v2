@@ -15,9 +15,33 @@ var controllers = require('./controllers');
  * ROUTES *
  **********/
 
+ /*
+  * HTML Endpoints
+  */
+
 app.get('/', function homepage(req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
+
+app.get('/templates/:name', function templates(req, res) {
+  var name = req.params.name;
+  res.sendFile(__dirname + '/views/templates/' + name + '.html');
+});
+
+
+/*
+ * JSON API Endpoints
+ */
+app.get('/api', controllers.api.index);
+
+app.get('/api/listings', controllers.listings.index);
+app.get('/api/listings/:listingId', controllers.listings.show);
+app.post('/api/listings', controllers.listings.create);
+app.delete('/api/listings/:listingId', controllers.listings.destroy);
+// app.put('/api/albums/:albumId', controllers.albums.update);
+
+
+// ALL OTHER ROUTES
 
 app.get('*', function homepage (req, res) {
   res.sendFile(__dirname + '/views/index.html');

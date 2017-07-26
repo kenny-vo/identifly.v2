@@ -4,7 +4,7 @@ angular
 
 config.$inject = ['$routeProvider', '$locationProvider'];
 
-function confid ($routeProvider, $locationProvider) {
+function config ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       templateURL: '/templates/listings',
