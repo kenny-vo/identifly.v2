@@ -10,6 +10,8 @@ app.use(bodyParser.json());
 app.use('/vendor', express.static(__dirname + '/bower_components'));
 
 var controllers = require('./controllers');
+var mongoose = require('mongoose');
+
 
 /**********
  * ROUTES *
@@ -51,7 +53,6 @@ app.get('*', function homepage (req, res) {
  * SERVER *
  **********/
 
-// listen on port 3000
 app.listen(process.env.PORT || 3000, function () {
   console.log('Express server is running on http://localhost:3000/');
 });
