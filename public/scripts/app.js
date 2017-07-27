@@ -16,6 +16,11 @@ function config ($routeProvider, $locationProvider) {
       controllerAs: 'listingsIndexCtrl',
       controller: 'ListingsIndexController'
     })
+    .when('/login', {
+      templateUrl: '/templates/login',
+      controllerAs: 'loginCtrl',
+      controller: 'LoginController'
+    })
     .when('/listings/:id', {
 
     })

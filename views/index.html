@@ -11,14 +11,6 @@
     <link rel="stylesheet" href="/styles/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/styles/styles.css">
 
-    <!-- VENDOR SCRIPTS -->
-    <script src="/vendor/angular/angular.min.js"></script>
-    <script src="/vendor/angular-route/angular-route.min.js"></script>
-
-    <!-- APPLICATION SCRIPTS -->
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/ListingsIndexController.js"></script>
-
 
   </head>
   <body>
@@ -60,6 +52,32 @@
       </div>
     </header>
     <div ng-view> </div>
+
+
+    <!-- VENDOR SCRIPTS -->
+
+    <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCyZvEF5GfHc26Z68k3zTHZ3mjMIGsVwdw",
+        authDomain: "badger-project.firebaseapp.com",
+        databaseURL: "https://badger-project.firebaseio.com",
+        projectId: "badger-project",
+        storageBucket: "badger-project.appspot.com",
+        messagingSenderId: "1059752211062"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="/vendor/angular-route/angular-route.min.js"></script>
+
+    <!-- APPLICATION SCRIPTS -->
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/ListingsIndexController.js"></script>
+    <script src="/scripts/controllers/LoginController.js"></script>
+
+
 
   </body>
 
