@@ -9,7 +9,7 @@ var ListingSchema = new Schema({
   req1: String,
   req2: String,
   req3: String,
-  date: String,
+  date_post: String,
   date_req: String
 })
 
