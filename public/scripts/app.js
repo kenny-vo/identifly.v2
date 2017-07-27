@@ -7,12 +7,12 @@ config.$inject = ['$routeProvider', '$locationProvider'];
 function config ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
-      templateURL: '/templates/listings',
+      templateUrl: '/templates/listings',
       controllerAs: 'listingsIndexCtrl',
       controller: 'ListingsIndexController'
     })
     .when('/listings', {
-      templateURL: '/templates/listings',
+      templateUrl: '/templates/listings',
       controllerAs: 'listingsIndexCtrl',
       controller: 'ListingsIndexController'
     })
