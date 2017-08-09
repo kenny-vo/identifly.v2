@@ -1,6 +1,5 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/3000");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tunely-test");
 
-var Listing = require('./listing');
-
-module.exports.Listing = Listing;
+module.exports.User = require('./user');
+module.exports.Listing = require('./listing');

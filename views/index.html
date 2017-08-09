@@ -2,18 +2,19 @@
 <html lang="en" ng-app="identifly">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>IdentiFly</title>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/styles/styles.css">
 
 
   </head>
   <body>
+    <!-- NAV BAR -->
     <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -27,58 +28,41 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav pull-right">
-            <li><a href="#">About</a></li>
-            <li><a ng-href="login">Login</a></li>
-            <li><a ng-href="create-listing">Create Request</a></li>
-<!--
+            <li><a ng-href="/register">Register</a></li>
+            <li><a ng-href="/login">Login</a></li>
+            <li><a ng-href="/create-listing">Create Request</a></li>
+            <li><a ng-href="/new/vendor">Vendors</a></li>
+
+
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, Kenny! <span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, Customer <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#"> <i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Messages</a></li>
-                <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                <li><a href="/profile"> <i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+                <li><a href="/messages"><i class="fa fa-envelope-o" aria-hidden="true"></i> Messages</a></li>
+                <li><a href="/"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
               </ul>
-            </li> -->
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-    <header>
-      <div <class="header-content">
-        <div class="header-content-inner text-center">
-          <h1 class="header-name"> Identifly </h1>
-          <h4 class="header-tag-line"> Identify what you need on the fly</h4>
-        </div>
-      </div>
-    </header>
-    <div ng-view> </div>
+
+    <div ng-view></div>
 
 
     <!-- VENDOR SCRIPTS -->
 
-    <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCyZvEF5GfHc26Z68k3zTHZ3mjMIGsVwdw",
-        authDomain: "badger-project.firebaseapp.com",
-        databaseURL: "https://badger-project.firebaseio.com",
-        projectId: "badger-project",
-        storageBucket: "badger-project.appspot.com",
-        messagingSenderId: "1059752211062"
-      };
-      firebase.initializeApp(config);
-    </script>
     <script src="/vendor/angular/angular.min.js"></script>
     <script src="/vendor/angular-route/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/satellizer/0.14.1/satellizer.min.js"></script>
 
     <!-- APPLICATION SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/ListingsIndexController.js"></script>
-    <script src="/scripts/controllers/LoginController.js"></script>
-
-
+    <script src="/scripts/controllers/ListingsShowController.js"></script>
 
   </body>
-
 </html>
